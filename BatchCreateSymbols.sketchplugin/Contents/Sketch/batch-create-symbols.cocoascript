@@ -1,4 +1,29 @@
-function onRun(context) {
+//TODO: Combine the reusable code between the two functions;
+
+var createSymbols = function(context) {
+  try {
+    var api = context.api();
+    var doc = api.selectedDocument;
+    var page = doc.selectedPage;
+
+    var document = context.document;
+    var selection = context.selection;
+    var selectionsArray = selection.objectEnumerator();
+    var layer;
+
+    //Loop over the selected layers/groups and add them to the symbols page
+    while(selection = selectionsArray.nextObject()) {
+        var symbols = MSLayerArray.arrayWithLayers([selection]);
+        var symbolName = selection.name();
+        var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+    }
+
+  } catch(e) {
+    log(e);
+  }
+}
+
+var createCustomSymbols = function(context) {
   try {
     var api = context.api();
     var doc = api.selectedDocument;
@@ -10,9 +35,7 @@ function onRun(context) {
     var layer;
     var idx = 0;
 
-    //TODO: Have two options. One to use existing layer names and another to customize the symbol names
-    //      Prefix? Suffix? Automatic numbering?
-    var symbolNameOverride = api.getStringFromUser('What should the text layer contain?', '');
+    var symbolNameOverride = api.getStringFromUser('Custom Name: [YOUR TEXT]-#', '');
 
     //handle cancel button
     if(symbolNameOverride == nil) {
@@ -22,7 +45,7 @@ function onRun(context) {
     //handle submission of empty input
     //TODO: Disable OK button until the user has entered some text into the input
     if(symbolNameOverride == '') {
-      api.message('Please enter some text.');
+      api.message('Please enter a custom symbol name.');
       return
     }
 
