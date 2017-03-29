@@ -1,0 +1,15 @@
+function onRun(context) {
+  var sketch = context.api();
+  var doc = sketch.selectedDocument;
+  var page = doc.selectedPage;
+
+  var layer = page.newText({
+    alignment: NSTextAlignmentCenter,
+    systemFontSize: 36,
+    text: "Batch Create Symbols!"
+  });
+
+  layer.adjustToFit();
+
+  doc.centerOnLayer(layer);
+}
