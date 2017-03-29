@@ -1,15 +1,32 @@
 function onRun(context) {
-  var sketch = context.api();
-  var doc = sketch.selectedDocument;
-  var page = doc.selectedPage;
+  try {
+    var api = context.api();
+    var doc = api.selectedDocument;
+    var page = doc.selectedPage;
 
-  var layer = page.newText({
-    alignment: NSTextAlignmentCenter,
-    systemFontSize: 36,
-    text: "Batch Create Symbols!"
-  });
+    var symbolName = api.getStringFromUser('What should the text layer contain?', '');
 
-  layer.adjustToFit();
+    if(symbolName == nil) {
+      return
+    }
 
-  doc.centerOnLayer(layer);
+    //TODO: Disable OK button until the user has entered some text into the input
+    if(symbolName == '') {
+      api.message('Please enter some text.');
+      return
+    }
+
+    var layer = page.newText({
+      alignment: NSTextAlignmentCenter,
+      systemFontSize: 36,
+      text: symbolName
+    });
+
+    layer.adjustToFit();
+
+    api.centerOnLayer(layer);
+
+  } catch(e) {
+    log(e);
+  }
 }
