@@ -4,27 +4,36 @@ function onRun(context) {
     var doc = api.selectedDocument;
     var page = doc.selectedPage;
 
-    var symbolName = api.getStringFromUser('What should the text layer contain?', '');
+    var document = context.document;
+    var selection = context.selection;
+    var selectionsArray = selection.objectEnumerator();
+    var layer;
+    var idx = 0;
 
-    if(symbolName == nil) {
+    //TODO: Have two options. One to use existing layer names and another to customize the symbol names
+    //      Prefix? Suffix? Automatic numbering?
+    var symbolNameOverride = api.getStringFromUser('What should the text layer contain?', '');
+
+    //handle cancel button
+    if(symbolNameOverride == nil) {
       return
     }
 
+    //handle submission of empty input
     //TODO: Disable OK button until the user has entered some text into the input
-    if(symbolName == '') {
+    if(symbolNameOverride == '') {
       api.message('Please enter some text.');
       return
     }
 
-    var layer = page.newText({
-      alignment: NSTextAlignmentCenter,
-      systemFontSize: 36,
-      text: symbolName
-    });
-
-    layer.adjustToFit();
-
-    api.centerOnLayer(layer);
+    //Loop over the selected layers/groups and add them to the symbols page
+    while(selection = selectionsArray.nextObject()) {
+        idx++
+        var symbols = MSLayerArray.arrayWithLayers([selection]);
+        //TODO: Clean this up
+        var symbolName = symbolNameOverride + '-' + idx;
+        var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+    }
 
   } catch(e) {
     log(e);
