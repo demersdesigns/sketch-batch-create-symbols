@@ -1,0 +1,24 @@
+{
+  "name": "Batch Create Symbols",
+  "description": "Plugin to create an individual symbol out of every selected layer",
+  "author": "Paul Demers",
+  "homepage": "https://github.com/demersdesigns/sketch-batch-symbols",
+  "version": 1.0,
+  "identifier": "com.example.sketch.batch-create-symbols",
+  "compatibleVersion": "42",
+  "commands": [
+    {
+      "name": "Batch Create Symbols",
+      "identifier": "batch-create-symbols",
+      "shortcut": "ctrl opt shift b",
+      "script": "batch-create-symbols.cocoascript",
+    }
+  ],
+  "menu": {
+    "title": "Batch Create Symbols",
+    "isRoot": true,
+    "items": [
+      "batch-create-symbols"
+    ]
+  }
+}
