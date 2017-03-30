@@ -1,4 +1,4 @@
-var s = (function (context) {
+var generateSelection = function (context) {
   var api = context.api(),
     selectedDoc = api.selectedDocument,
     page = selectedDoc.selectedPage,
@@ -14,9 +14,10 @@ var s = (function (context) {
     selection: selection,
     selectionsArray: selections
   }
-})(context);
+};
 
-var createSymbols = function (s) {
+var createSymbols = function (context) {
+  var s = generateSelection(context);
   //Loop over the selected layers/groups and add them to the symbols page
   while (s.selection = s.selectionsArray.nextObject()) {
     var symbols = MSLayerArray.arrayWithLayers([s.selection]);
@@ -25,7 +26,8 @@ var createSymbols = function (s) {
   }
 };
 
-var createCustomSymbols = function (s) {
+var createCustomSymbols = function (context) {
+  var s = generateSelection(context);
   var idx = 0;
 
   //Get user input and use it to name the symbols
