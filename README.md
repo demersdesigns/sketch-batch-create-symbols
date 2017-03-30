@@ -18,13 +18,10 @@ For example, if you have three layers, and you enter 'portfolio' as the custom n
 Video demo coming soon!
 
 # Installation
-Download from [Github](https://github.com/demersdesigns/sketch-batch-create-symbols/archive/master.zip)
-
-Unzip
-
-Locate and double-click on the `BatchCreateSymbols.sketchplugin` file
-
-When Sketch alerts you that the plugin has successfully been installed, you are ready to go!
+1. Download from [Github](https://github.com/demersdesigns/sketch-batch-create-symbols/archive/master.zip)
+2. Unzip
+3. Locate and double-click on the `BatchCreateSymbols.sketchplugin` file
+4. When Sketch alerts you that the plugin has successfully been installed, you are ready to go!
 
 # Changelog
 v 1.0 - Initial release.
