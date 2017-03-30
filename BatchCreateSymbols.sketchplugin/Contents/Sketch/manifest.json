@@ -8,17 +8,25 @@
   "compatibleVersion": "42",
   "commands": [
     {
-      "name": "Batch Create Symbols",
-      "identifier": "batch-create-symbols",
+      "name": "Use Layer Names",
+      "identifier": "create-symbols",
       "shortcut": "ctrl opt shift b",
       "script": "batch-create-symbols.cocoascript",
+      "handler": "createSymbols"
+    },
+    {
+      "name": "Use Custom Names",
+      "identifier": "create-custom-symbols",
+      "shortcut": "ctrl opt shift c",
+      "script": "batch-create-symbols.cocoascript",
+      "handler": "createCustomSymbols"
     }
   ],
   "menu": {
     "title": "Batch Create Symbols",
-    "isRoot": true,
     "items": [
-      "batch-create-symbols"
+      "create-symbols",
+      "create-custom-symbols"
     ]
   }
 }

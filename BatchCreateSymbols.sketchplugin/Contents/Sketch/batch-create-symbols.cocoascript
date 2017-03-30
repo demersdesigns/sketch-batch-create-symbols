@@ -1,15 +1,53 @@
-function onRun(context) {
-  var sketch = context.api();
-  var doc = sketch.selectedDocument;
-  var page = doc.selectedPage;
+var s = (function (context) {
+  var api = context.api(),
+    selectedDoc = api.selectedDocument,
+    page = selectedDoc.selectedPage,
+    doc = context.document,
+    selection = context.selection,
+    selections = selection.objectEnumerator();
 
-  var layer = page.newText({
-    alignment: NSTextAlignmentCenter,
-    systemFontSize: 36,
-    text: "Batch Create Symbols!"
-  });
+  return {
+    api: api,
+    doc: selectedDoc,
+    page: page,
+    document: doc,
+    selection: selection,
+    selectionsArray: selections
+  }
+})(context);
 
-  layer.adjustToFit();
+var createSymbols = function (s) {
+  //Loop over the selected layers/groups and add them to the symbols page
+  while (s.selection = s.selectionsArray.nextObject()) {
+    var symbols = MSLayerArray.arrayWithLayers([s.selection]);
+    var symbolName = s.selection.name();
+    var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+  }
+};
 
-  doc.centerOnLayer(layer);
-}
+var createCustomSymbols = function (s) {
+  var idx = 0;
+
+  //Get user input and use it to name the symbols
+  var symbolNameOverride = s.api.getStringFromUser('Custom Name: [YOUR TEXT]-#', '');
+
+  //handle cancel button
+  if (symbolNameOverride == nil) {
+    return
+  }
+
+  //handle submission of empty input
+  if (symbolNameOverride == '') {
+    s.api.message('Please enter a custom symbol name.');
+    return
+  }
+
+  //Loop over the selected layers/groups update their names and add them to the symbols page
+  while (s.selection = s.selectionsArray.nextObject()) {
+    idx++;
+    var symbols = MSLayerArray.arrayWithLayers([s.selection]);
+    //TODO: Clean this up
+    var symbolName = symbolNameOverride + '-' + idx;
+    var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+  }
+};
