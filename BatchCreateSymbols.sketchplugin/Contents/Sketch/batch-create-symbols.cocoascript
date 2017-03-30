@@ -1,18 +1,18 @@
 var s = (function (context) {
   var api = context.api(),
-    doc = api.selectedDocument,
-    page = doc.selectedPage,
-    document = context.document,
+    selectedDoc = api.selectedDocument,
+    page = selectedDoc.selectedPage,
+    doc = context.document,
     selection = context.selection,
-    selectionsArray = selection.objectEnumerator();
+    selections = selection.objectEnumerator();
 
   return {
     api: api,
-    doc: doc,
+    doc: selectedDoc,
     page: page,
-    document: document,
+    document: doc,
     selection: selection,
-    selectionsArray: selectionsArray
+    selectionsArray: selections
   }
 })(context);
 
