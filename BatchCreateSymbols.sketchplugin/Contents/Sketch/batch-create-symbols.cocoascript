@@ -16,7 +16,7 @@ var generateSelection = function (context) {
   }
 };
 
-var createSymbols = function (context) {
+var createSymbols = function () {
   var s = generateSelection(context);
   //Loop over the selected layers/groups and add them to the symbols page
   while (s.selection = s.selectionsArray.nextObject()) {
@@ -26,7 +26,7 @@ var createSymbols = function (context) {
   }
 };
 
-var createCustomSymbols = function (context) {
+var createCustomSymbols = function () {
   var s = generateSelection(context);
   var idx = 0;
 
