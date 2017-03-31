@@ -1,4 +1,4 @@
-![alt="Sketch Batch Create Symbols"](https://github.com/demersdesigns/sketch-batch-create-symbols/blob/master/logo.png?raw=true)
+![alt="Sketch Batch Create Symbols"](https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/logo.png)
 
 # Overview
 In Sketch, when you have a bunch of layers that need to be converted to symbols
