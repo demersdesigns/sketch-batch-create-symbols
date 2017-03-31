@@ -26,6 +26,8 @@ For example, if you have three layers, and you enter 'portfolio' as the custom n
 [![Install Sketch Batch Create Symbols with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Sketch Batch Create Symbols with Sketchpacks")](https://sketchpacks.com/demersdesigns/sketch-batch-create-symbols/install)
 
 # Changelog
+v 1.0.1 - Plugin added to [Sketchpacks](http://sketchpacks-com)
+
 v 1.0 - Initial release.
 
 # License
