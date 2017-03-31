@@ -17,13 +17,17 @@ For example, if you have three layers, and you enter 'portfolio' as the custom n
 
 <img src="https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/demo.gif" />
 
-# Installation
+# Manual Installation
 1. Download from [Github](https://github.com/demersdesigns/sketch-batch-create-symbols/archive/master.zip)
 2. Unzip
 3. Locate and double-click on the `BatchCreateSymbols.sketchplugin` file
 4. When Sketch alerts you that the plugin has successfully been installed, you are ready to go!
 
+[![Install Sketch Batch Create Symbols with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Sketch Batch Create Symbols with Sketchpacks")](https://sketchpacks.com/demersdesigns/sketch-batch-create-symbols/install)
+
 # Changelog
+v 1.0.1 - Plugin added to [Sketchpacks](http://sketchpacks-com)
+
 v 1.0 - Initial release.
 
 # License
