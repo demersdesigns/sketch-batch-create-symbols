@@ -1,4 +1,4 @@
-![alt="Sketch Batch Create Symbols"](https://github.com/demersdesigns/sketch-batch-create-symbols/blob/master/logo.png?raw=true)
+![alt="Sketch Batch Create Symbols"](https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/logo.png)
 
 # Overview
 In Sketch, when you have a bunch of layers that need to be converted to symbols
@@ -15,7 +15,7 @@ choose 'Batch Create Symbols'. The Use Layer Names option will create symbols an
 This works by taking the name you enter into the input and adding a number after it for each symbol to be created.
 For example, if you have three layers, and you enter 'portfolio' as the custom name, each symbol will be named portfolio-1, portfolio-2, and portfolio-3.
 
-Video demo coming soon!
+<img src="https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/demo.gif" />
 
 # Installation
 1. Download from [Github](https://github.com/demersdesigns/sketch-batch-create-symbols/archive/master.zip)
