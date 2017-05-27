@@ -53,3 +53,30 @@ var createCustomSymbols = function (context) {
     var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
   }
 };
+
+var createCustomSymbolWithFolder = function(context){
+  var s = generateSelection(context);
+
+  //Get user input and use it to name the symbols
+  var symbolNameOverride = s.api.getStringFromUser('Custom Folder: Folder/Sub-Folder/', '');
+
+  //handle cancel button
+  if (symbolNameOverride == nil) {
+    return
+  }
+
+  //handle submission of empty input
+  if (symbolNameOverride == '') {
+    s.api.message('Please enter a custom symbol name.');
+    return
+  }
+
+  //Loop over the selected layers/groups update their names and add them to the symbols page
+  while (s.selection = s.selectionsArray.nextObject()) {
+    var symbols = MSLayerArray.arrayWithLayers([s.selection]);
+    //TODO: Add check if folder doesn't end with a slash
+    var folderName = symbolNameOverride;
+    var symbolName = folderName + s.selection.name();
+    var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+  }
+}
