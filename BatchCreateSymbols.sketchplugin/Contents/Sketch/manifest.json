@@ -3,7 +3,7 @@
   "description": "Plugin to create an individual symbol out of every selected layer",
   "author": "Paul Demers",
   "homepage": "https://github.com/demersdesigns/sketch-batch-symbols",
-  "version": 1.0,
+  "version": 1.1,
   "identifier": "com.example.sketch.batch-create-symbols",
   "compatibleVersion": "42",
   "commands": [
@@ -20,13 +20,21 @@
       "shortcut": "ctrl opt shift c",
       "script": "batch-create-symbols.cocoascript",
       "handler": "createCustomSymbols"
+    },
+    {
+      "name": "Use Custom Folders",
+      "identifier": "create-custom-folders",
+      "shortcut": "ctrl opt shift f",
+      "script": "batch-create-symbols.cocoascript",
+      "handler": "createCustomSymbolWithFolder"
     }
   ],
   "menu": {
     "title": "Batch Create Symbols",
     "items": [
       "create-symbols",
-      "create-custom-symbols"
+      "create-custom-symbols",
+      "create-custom-folders"
     ]
   }
 }
