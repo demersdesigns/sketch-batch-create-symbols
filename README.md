@@ -10,10 +10,23 @@ This is really handy when you need to convert a bunch of layers to symbols.
 
 # Usage
 Select the shapes, layers, images, or groups that you want to convert into symbols. Then from the Plugins menu,
-choose 'Batch Create Symbols'. The Use Layer Names option will create symbols and use the existing layer names. Alternatively, the Use Custom Names option will allow you to add your own name that the newly created symbols will use.
+choose 'Batch Create Symbols' and pick from one of the three options.
+
+**Use Layer Names** will create symbols and use the existing layer names.
+
+**Use Custom Names** option will allow you to add your own name that the newly created symbols will use.
 
 This works by taking the name you enter into the input and adding a number after it for each symbol to be created.
+
 For example, if you have three layers, and you enter 'portfolio' as the custom name, each symbol will be named portfolio-1, portfolio-2, and portfolio-3.
+
+**Use Custom Folders** allows you to create symbols within a folder structure.
+
+If you select a layer or multiple layers and choose Custom Folders, you can enter in a series of names separated by slashes to create a series of nested folders in the insert symbols menu.
+
+For example, entering iOS/3x/assets/ would create iOS>3x>assets>symbol-names.
+
+**Please note: you must have a trailing slash at the end of your folder structure for this to work properly.**
 
 <img src="https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/demo.gif" />
 
@@ -26,6 +39,7 @@ For example, if you have three layers, and you enter 'portfolio' as the custom n
 [![Install Sketch Batch Create Symbols with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Sketch Batch Create Symbols with Sketchpacks")](https://sketchpacks.com/demersdesigns/sketch-batch-create-symbols/install)
 
 # Changelog
+v 1.1 - Add Use Custom Folders option. Thanks [PsyGik](https://github.com/PsyGik)!
 v 1.0 - Initial release.
 
 # License
