@@ -20,13 +20,21 @@
       "shortcut": "ctrl opt shift c",
       "script": "batch-create-symbols.cocoascript",
       "handler": "createCustomSymbols"
+    },
+    {
+      "name": "Use Custom Folders",
+      "identifier": "create-custom-folders",
+      "shortcut": "ctrl opt shift f",
+      "script": "batch-create-symbols.cocoascript",
+      "handler": "createCustomSymbolWithFolder"
     }
   ],
   "menu": {
     "title": "Batch Create Symbols",
     "items": [
       "create-symbols",
-      "create-custom-symbols"
+      "create-custom-symbols",
+      "create-custom-folders"
     ]
   }
 }
