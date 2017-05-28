@@ -40,6 +40,7 @@ For example, entering iOS/3x/assets/ would create iOS>3x>assets>symbol-names.
 
 # Changelog
 v 1.1 - Add Use Custom Folders option. Thanks [PsyGik](https://github.com/PsyGik)!
+
 v 1.0 - Initial release.
 
 # License
