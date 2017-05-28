@@ -73,9 +73,15 @@ var createCustomSymbolWithFolder = function(context){
 
   //Loop over the selected layers/groups update their names and add them to the symbols page
   while (s.selection = s.selectionsArray.nextObject()) {
+    var slashCheck = /^(?!^\/[a-z]{2}\/$).*\/$/;
     var symbols = MSLayerArray.arrayWithLayers([s.selection]);
-    //TODO: Add check if folder doesn't end with a slash
-    var folderName = symbolNameOverride;
+    //Check to make sure entry ends with a slash
+    if(slashCheck.exec(symbolNameOverride) !== null){
+        var folderName = symbolNameOverride;
+    } else {
+        s.api.message('Please be sure your entry ends with a /.');
+        return
+    }
     var symbolName = folderName + s.selection.name();
     var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
   }
