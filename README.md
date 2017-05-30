@@ -1,5 +1,7 @@
 ![alt="Sketch Batch Create Symbols"](https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/logo.png)
 
+[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.example.sketch.batch-create-symbols/version.svg)](https://api.sketchpacks.com/v1/plugins/com.example.sketch.batch-create-symbols/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.example.sketch.batch-create-symbols/compatibility.svg)](https://sketchpacks.com/demersdesigns/sketch-batch-symbols)
+
 # Overview
 In Sketch, when you have a bunch of layers that need to be converted to symbols
 you have to select them one by one and use the 'Convert to Symbol' function. Multiple
