@@ -16,6 +16,13 @@
       "handler": "createSymbols"
     },
     {
+      "name": "Use Layer Names With Prefix",
+      "identifier": "create-prefix-symbols",
+      "shortcut": "ctrl opt shift p",
+      "script": "batch-create-symbols.cocoascript",
+      "handler": "createSymbolsWithPrefix"
+    },
+    {
       "name": "Use Custom Names",
       "identifier": "create-custom-symbols",
       "shortcut": "ctrl opt shift c",
@@ -34,6 +41,7 @@
     "title": "Batch Create Symbols",
     "items": [
       "create-symbols",
+      "create-prefix-symbols",
       "create-custom-symbols",
       "create-custom-folders"
     ]

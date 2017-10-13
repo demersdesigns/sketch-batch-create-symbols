@@ -26,6 +26,25 @@ var createSymbols = function (context) {
   }
 };
 
+var createSymbolsWithPrefix = function (context) {
+  var s = generateSelection(context);
+  
+  //Get user input and use it to name the symbols
+  var symbolNamePrefix = s.api.getStringFromUser('Symbol Prefix', '');
+  
+  //handle cancel button
+  if (symbolNamePrefix == nil) {
+    return
+  }
+  
+  //Loop over the selected layers/groups and add them to the symbols page
+  while (s.selection = s.selectionsArray.nextObject()) {
+    var symbols = MSLayerArray.arrayWithLayers([s.selection]);
+    var symbolName = symbolNamePrefix + s.selection.name();
+    var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+  }
+};
+
 var createCustomSymbols = function (context) {
   var s = generateSelection(context);
   var idx = 0;
