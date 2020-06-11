@@ -1,13 +1,14 @@
 var generateSelection = function (context) {
-  var api = context.api(),
-    selectedDoc = api.selectedDocument,
+
+  var api = require('sketch/dom').getSelectedDocument(),
+    selectedDoc = require('sketch/dom').getSelectedDocument(),
     page = selectedDoc.selectedPage,
     doc = context.document,
     selection = context.selection,
     selections = selection.objectEnumerator();
 
   return {
-    api: api,
+    api: require('sketch/dom').getSelectedDocument(),
     doc: selectedDoc,
     page: page,
     document: doc,
@@ -22,6 +23,25 @@ var createSymbols = function (context) {
   while (s.selection = s.selectionsArray.nextObject()) {
     var symbols = MSLayerArray.arrayWithLayers([s.selection]);
     var symbolName = s.selection.name();
+    var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
+  }
+};
+
+var createSymbolsWithPrefix = function (context) {
+  var s = generateSelection(context);
+
+  //Get user input and use it to name the symbols
+  var symbolNamePrefix = s.api.getStringFromUser('Symbol Prefix', '');
+
+  //handle cancel button
+  if (symbolNamePrefix == nil) {
+    return
+  }
+
+  //Loop over the selected layers/groups and add them to the symbols page
+  while (s.selection = s.selectionsArray.nextObject()) {
+    var symbols = MSLayerArray.arrayWithLayers([s.selection]);
+    var symbolName = symbolNamePrefix + s.selection.name();
     var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(symbols, symbolName, true);
   }
 };
