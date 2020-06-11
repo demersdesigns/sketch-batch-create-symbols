@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Batch Create Symbols</title>
+    <link>https://raw.githubusercontent.com/michelve/sketch-batch-create-symbols/master/appcast.xml</link>
+    <description>This release adds a new feature that allows you to create symbols with a folder structure by adding '/' between and at the end of a series of strings</description>
+    <language>en</language>
+    <item>
+      <title>Version 2.1.1</title>
+      <description>
+        <![CDATA[
+        <ul>
+        <li>Fix for sort failing in Sketch 65.</li>
+        </ul>
+        ]]>
+      </description>
+      <enclosure url="https://github.com/michelve/sketch-batch-create-symbols/archive/master.zip" sparkle:version="2.1.1" />
+    </item>
+  </channel>
+</rss>
