@@ -2,10 +2,11 @@
   "name": "Batch Create Symbols",
   "description": "Plugin to create an individual symbol out of every selected layer",
   "author": "Paul Demers",
-  "homepage": "https://raw.githubusercontent.com/michelve/sketch-batch-create-symbols/master/appcast.xml",
-  "version": "2.1.1",
+  "homepage": "https://github.com/demersdesigns/sketch-batch-symbols",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/com.example.sketch.batch-create-symbols/appcast",
+  "version": "1.1",
   "identifier": "com.example.sketch.batch-create-symbols",
-  "icon" : "icon.png",
+  "compatibleVersion": "42",
   "commands": [
     {
       "name": "Use Layer Names",
@@ -13,13 +14,6 @@
       "shortcut": "ctrl opt shift b",
       "script": "batch-create-symbols.cocoascript",
       "handler": "createSymbols"
-    },
-    {
-      "name": "Use Layer Names With Prefix",
-      "identifier": "create-prefix-symbols",
-      "shortcut": "ctrl opt shift p",
-      "script": "batch-create-symbols.cocoascript",
-      "handler": "createSymbolsWithPrefix"
     },
     {
       "name": "Use Custom Names",
@@ -40,7 +34,6 @@
     "title": "Batch Create Symbols",
     "items": [
       "create-symbols",
-      "create-prefix-symbols",
       "create-custom-symbols",
       "create-custom-folders"
     ]
