@@ -1,7 +1,7 @@
 {
   "name": "sketch-batch-create-symbols",
   "description": "Plugin to create an individual symbol out of every selected layer",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "engines": {
     "sketch": ">=49.0"
   },
@@ -9,9 +9,7 @@
     "name": "sketch-batch-create-symbols",
     "manifest": "src/manifest.json",
     "main": "sketch-batch-create-symbols.sketchplugin",
-    "assets": [
-      "assets/**/*"
-    ],
+    "assets": ["assets/**/*"],
     "sketch-assets-file": "sketch-assets/icons.sketch"
   },
   "scripts": {
