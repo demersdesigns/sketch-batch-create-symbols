@@ -1,0 +1,32 @@
+{
+  "name": "sketch-batch-create-symbols",
+  "description": "Plugin to create an individual symbol out of every selected layer",
+  "version": "1.1.0",
+  "engines": {
+    "sketch": ">=49.0"
+  },
+  "skpm": {
+    "name": "sketch-batch-create-symbols",
+    "manifest": "src/manifest.json",
+    "main": "sketch-batch-create-symbols.sketchplugin",
+    "assets": ["assets/**/*"],
+    "sketch-assets-file": "sketch-assets/icons.sketch"
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.7.0"
+  },
+  "author": "Paul Demers <paul@cantina.co>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/demersdesigns/sketch-batch-create-symbols.git"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1"
+  }
+}
