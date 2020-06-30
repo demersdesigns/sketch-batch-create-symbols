@@ -1,5 +1,13 @@
 {
-  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "sketch-batch-create-symbols",
+  "description": "Plugin to create an individual symbol out of every selected layer",
+  "author": "Paul Demers",
+  "authorEmail": "paul@cantina.co",
+  "version": "2.0.0",
+  "identifier": "com.example.sketch-batch-create-symbols",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/com.example.sketch.batch-create-symbols/appcast",
+  "compatibleVersion": ">=49.0",
+  "disableCocoaScriptPreprocessor": true,
   "icon": "icon.png",
   "commands": [
     {

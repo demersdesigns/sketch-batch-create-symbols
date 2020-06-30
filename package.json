@@ -8,10 +8,10 @@
   "skpm": {
     "name": "sketch-batch-create-symbols",
     "manifest": "src/manifest.json",
+    "identifier": "com.example.sketch.batch-create-symbols",
     "main": "sketch-batch-create-symbols.sketchplugin",
-    "assets": [
-      "assets/**/*"
-    ],
+    "appcast": "https://api.sketchpacks.com/v1/plugins/com.example.sketch.batch-create-symbols/appcast",
+    "assets": ["assets/**/*"],
     "sketch-assets-file": "sketch-assets/icons.sketch"
   },
   "scripts": {
