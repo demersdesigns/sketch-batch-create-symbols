@@ -1,7 +1,7 @@
 {
   "name": "sketch-batch-create-symbols",
   "description": "",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "engines": {
     "sketch": ">=49.0"
   },
@@ -9,9 +9,7 @@
     "name": "sketch-batch-create-symbols",
     "manifest": "src/manifest.json",
     "main": "sketch-batch-create-symbols.sketchplugin",
-    "assets": [
-      "assets/**/*"
-    ],
+    "assets": ["assets/**/*"],
     "sketch-assets-file": "sketch-assets/icons.sketch"
   },
   "scripts": {
