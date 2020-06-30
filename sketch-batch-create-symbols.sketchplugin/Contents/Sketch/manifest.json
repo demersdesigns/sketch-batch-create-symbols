@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Use Layer Names",
+      "identifier": "create-symbols",
+      "shortcut": "ctrl opt shift b",
+      "script": "batch-create-symbols.js",
+      "handler": "createSymbols"
+    },
+    {
+      "name": "Use Custom Names",
+      "identifier": "create-custom-symbols",
+      "shortcut": "ctrl opt shift c",
+      "script": "batch-create-symbols.js",
+      "handler": "createSymbolsCustomName"
+    },
+    {
+      "name": "Use Custom Prefix",
+      "identifier": "create-custom-prefix",
+      "shortcut": "ctrl opt shift p",
+      "script": "batch-create-symbols.js",
+      "handler": "createSymbolsCustomPrefix"
+    },
+    {
+      "name": "Use Custom Folders",
+      "identifier": "create-custom-folders",
+      "shortcut": "ctrl opt shift f",
+      "script": "batch-create-symbols.js",
+      "handler": "createSymbolsCustomFolder"
+    }
+  ],
+  "menu": {
+    "title": "Batch Create Symbols",
+    "items": [
+      "create-symbols",
+      "create-custom-symbols",
+      "create-custom-prefix",
+      "create-custom-folders"
+    ]
+  },
+  "version": "1.2.0",
+  "description": "",
+  "name": "sketch-batch-create-symbols",
+  "identifier": "sketch-batch-create-symbols",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "author": "Paul Demers",
+  "authorEmail": "paul@cantina.co"
+}
