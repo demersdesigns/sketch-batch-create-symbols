@@ -40,12 +40,12 @@
       "create-custom-folders"
     ]
   },
-  "version": "1.2.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "Plugin to create an individual symbol out of every selected layer",
   "name": "sketch-batch-create-symbols",
   "identifier": "sketch-batch-create-symbols",
   "disableCocoaScriptPreprocessor": true,
-  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
+  "appcast": "https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/master/.appcast.xml",
   "author": "Paul Demers",
   "authorEmail": "paul@cantina.co"
 }
