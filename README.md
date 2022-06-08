@@ -1,7 +1,5 @@
 ![alt="Sketch Batch Create Symbols"](https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/gh-pages/logo.png)
 
-[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.example.sketch.batch-create-symbols/version.svg)](https://api.sketchpacks.com/v1/plugins/com.example.sketch.batch-create-symbols/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.example.sketch.batch-create-symbols/compatibility.svg)](https://sketchpacks.com/demersdesigns/sketch-batch-symbols)
-
 # Overview
 
 In Sketch, when you have a bunch of layers that need to be converted to symbols
@@ -43,9 +41,9 @@ For example, entering iOS/3x/assets/ would create iOS>3x>assets>symbol-names.
 3. Locate and double-click on the `BatchCreateSymbols.sketchplugin` file
 4. When Sketch alerts you that the plugin has successfully been installed, you are ready to go!
 
-[![Install Sketch Batch Create Symbols with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png 'Install Sketch Batch Create Symbols with Sketchpacks')](https://sketchpacks.com/demersdesigns/sketch-batch-create-symbols/install)
-
 # Changelog
+
+v 3.0 - Update to support Sketch 84+.
 
 v 2.0 - Updates to support Sketch 66. Adds custom prefix option. Thanks [clemens-schulz](clemens-schulz) & [michelve](https://github.com/michelve)!
 

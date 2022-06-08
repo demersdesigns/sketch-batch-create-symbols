@@ -3,10 +3,9 @@
   "description": "Quickly create an individual symbol out of every selected layer",
   "author": "Paul Demers",
   "authorEmail": "paul@pdemersjr.com",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "identifier": "com.example.sketch-batch-create-symbols",
-  "appcast": "https://raw.githubusercontent.com/demersdesigns/sketch-batch-create-symbols/master/.appcast.xml",
-  "compatibleVersion": ">=49.0",
+  "compatibleVersion": ">=84.0",
   "disableCocoaScriptPreprocessor": true,
   "icon": "icon.png",
   "commands": [
