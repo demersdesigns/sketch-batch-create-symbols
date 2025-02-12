@@ -43,7 +43,7 @@ For example, entering iOS/3x/assets/ would create iOS>3x>assets>symbol-names.
 
 # Changelog
 
-v 3.0 - Update to support Sketch 84+.
+v 3.0 - Update to support Sketch 84+. Thanks [Nhật Minh](https://github.com/dhnm) & [LukeMitDemHut](https://github.com/LukeMitDemHut)!
 
 v 2.0 - Updates to support Sketch 66. Adds custom prefix option. Thanks [clemens-schulz](clemens-schulz) & [michelve](https://github.com/michelve)!
 
