@@ -27,7 +27,7 @@ const createSymbols = function (context) {
   const selections = generateSelections(context)
   if (selectionCheck(selections)) {
     selections.map(selection => {
-      const symbols = MSLayerArray.arrayWithLayers([selection])
+      const symbols = [selection]
       let symbolName = selection.name()
       MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(
         symbols,
@@ -59,7 +59,7 @@ const createSymbolsCustomName = async context => {
     if (inputCheck(userEntry)) {
       selections.map((selection, idx) => {
         idx++
-        const symbols = MSLayerArray.arrayWithLayers([selection])
+        const symbols = [selection]
         console.log
         let symbolName = userEntry + '-' + idx
         var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(
@@ -93,7 +93,7 @@ const createSymbolsCustomPrefix = async context => {
     if (inputCheck(userEntry)) {
       selections.map((selection, idx) => {
         idx++
-        const symbols = MSLayerArray.arrayWithLayers([selection])
+        const symbols = [selection]
         console.log
         let symbolName = userEntry + '-' + selection.name()
         var createSymbol = MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(
@@ -127,7 +127,7 @@ const createSymbolsCustomFolder = async context => {
     if (inputCheck(userEntry)) {
       selections.map((selection, idx) => {
         const slashCheck = /^(?!^\/[a-z]{2}\/$).*\/$/
-        const symbols = MSLayerArray.arrayWithLayers([selection])
+        const symbols = [selection]
 
         if (slashCheck.exec(userEntry) !== null) {
           var folderName = userEntry
@@ -137,7 +137,7 @@ const createSymbolsCustomFolder = async context => {
         }
 
         selections.map((selection, idx) => {
-          const symbols = MSLayerArray.arrayWithLayers([selection])
+          const symbols = [selection]
           let symbolName = folderName + selection.name()
 
           MSSymbolCreator.createSymbolFromLayers_withName_onSymbolsPage(
